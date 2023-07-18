@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.d.DirectoryController">
+    <children>
+        <TableView fx:id="apptTableView" layoutX="1.0" layoutY="49.0" prefHeight="113.0" prefWidth="600.0">
+            <columns>
+                <TableColumn fx:id="apptIDColumn" prefWidth="38.0" text="ID" />
+                <TableColumn fx:id="apptTitleColumn" prefWidth="53.0" text="Title" />
+                <TableColumn fx:id="apptDescriptionColumn" prefWidth="58.0" text="Description" />
+                <TableColumn fx:id="apptLocationColumn" prefWidth="36.0" text="Location" />
+                <TableColumn fx:id="apptTypeColumn" prefWidth="60.0" text="Type" />
+                <TableColumn fx:id="apptStartColumn" minWidth="0.0" prefWidth="45.0" text="Start" />
+                <TableColumn fx:id="apptEndColumn" prefWidth="121.0" text="End" />
+                <TableColumn fx:id="apptCustomerIDColumn" minWidth="0.0" prefWidth="76.0" text="Customer ID" />
+                <TableColumn fx:id="apptUserIDColumn" prefWidth="47.0" text="User ID" />
+                <TableColumn fx:id="apptContactIDColumn" prefWidth="65.0" text="Contact ID" />
+            </columns>
+        </TableView>
+        <TableView fx:id="customerTableView" layoutX="11.0" layoutY="223.0" prefHeight="122.0" prefWidth="586.0">
+            <columns>
+                <TableColumn fx:id="customerIDColumn" prefWidth="75.0" text=" ID" />
+                <TableColumn fx:id="customerNameColumn" prefWidth="108.0" text=" Name" />
+            <TableColumn fx:id="customerAddressColumn" prefWidth="132.0" text="Address" />
+            <TableColumn fx:id="customerPostalCodeColumn" prefWidth="88.0" text="Postal Code" />
+            <TableColumn fx:id="customerPhoneColumn" prefWidth="103.0" text="Phone" />
+            <TableColumn fx:id="customerDivisionIDColumn" prefWidth="79.0" text="Division ID" />
+            </columns>
+        </TableView>
+        <Button layoutX="32.0" layoutY="361.0" mnemonicParsing="false" onAction="#openAddCustomer" text="Add" />
+        <Button layoutX="84.0" layoutY="361.0" mnemonicParsing="false" onAction="#openModifyCustomer" text="Modify" />
+        <Button layoutX="152.0" layoutY="361.0" mnemonicParsing="false" onAction="#deleteCustomer" text="Delete" />
+        <Label layoutX="32.0" layoutY="14.0" text="Appointments">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="31.0" layoutY="200.0" text="Customers">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Button layoutX="32.0" layoutY="169.0" mnemonicParsing="false" onAction="#openAddAppointment" text="Add" />
+        <Button layoutX="84.0" layoutY="169.0" mnemonicParsing="false" onAction="#openModifyAppointment" text="Modify" />
+        <Button layoutX="152.0" layoutY="169.0" mnemonicParsing="false" onAction="#deleteAppt" text="Delete" />
+        <RadioButton layoutX="361.0" layoutY="18.0" mnemonicParsing="false" onAction="#apptsByMonth" text="This Month">
+         <toggleGroup>
+            <ToggleGroup fx:id="filterToggleGroup" />
+         </toggleGroup></RadioButton>
+        <RadioButton layoutX="457.0" layoutY="18.0" mnemonicParsing="false" onAction="#apptsByWeek" text="This Week" toggleGroup="$filterToggleGroup" />
+        <RadioButton layoutX="243.0" layoutY="18.0" mnemonicParsing="false" onAction="#allAppts" text="All Appointments" toggleGroup="$filterToggleGroup" />
+        <Button layoutX="422.0" layoutY="361.0" mnemonicParsing="false" onAction="#openReports" text="Reports" />
+        <Button layoutX="492.0" layoutY="361.0" mnemonicParsing="false" onAction="#logout" text="Logout" />
+    </children>
+</AnchorPane>

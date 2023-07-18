@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.d.AddAppointmentController">
+   <children>
+      <Label layoutX="43.0" layoutY="14.0" text="Add Appointment">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="44.0" layoutY="78.0" text="Title" />
+      <Label layoutX="40.0" layoutY="99.0" text="Description" />
+      <Label layoutX="41.0" layoutY="124.0" text="Location" />
+      <Label layoutX="43.0" layoutY="54.0" text="ID" />
+      <TextField fx:id="apptIDField" disable="true" editable="false" layoutX="102.0" layoutY="50.0" promptText="Auto-Generated" />
+      <TextField fx:id="titleField" layoutX="102.0" layoutY="74.0" />
+      <TextField fx:id="descriptionField" layoutX="102.0" layoutY="95.0" />
+      <TextField fx:id="locationField" layoutX="102.0" layoutY="120.0" />
+      <Label layoutX="42.0" layoutY="145.0" text="Type" />
+      <Label layoutX="40.0" layoutY="170.0" text="Start Date" />
+      <Label layoutX="41.0" layoutY="192.0" text="Start Time" />
+      <Label layoutX="42.0" layoutY="216.0" text="End Date" />
+      <Label layoutX="43.0" layoutY="241.0" text="End Time" />
+      <Label layoutX="33.0" layoutY="266.0" text="Customer ID " />
+      <Label layoutX="44.0" layoutY="291.0" text="User lD" />
+      <Label layoutX="45.0" layoutY="310.0" text="Contact" />
+      <Button layoutX="368.0" layoutY="332.0" mnemonicParsing="false" onAction="#saveAndReturn" text="Save" />
+      <Button layoutX="475.0" layoutY="332.0" mnemonicParsing="false" onAction="#cancelAndReturnToDirectory" text="Cancel" />
+      <TextField fx:id="typeField" layoutX="102.0" layoutY="141.0" />
+      <DatePicker fx:id="startDateSelection" layoutX="102.0" layoutY="166.0" prefHeight="25.0" prefWidth="149.0" />
+      <DatePicker fx:id="endDateSelection" layoutX="103.0" layoutY="212.0" prefHeight="17.0" prefWidth="149.0" />
+      <ComboBox fx:id="startBox" layoutX="103.0" layoutY="188.0" prefWidth="150.0" />
+      <ComboBox fx:id="endBox" layoutX="103.0" layoutY="237.0" prefWidth="150.0" />
+      <ComboBox fx:id="contactBox" layoutX="102.0" layoutY="306.0" prefWidth="150.0" />
+      <TextField fx:id="customerIDField" layoutX="104.0" layoutY="262.0" />
+      <TextField fx:id="userIDField" layoutX="102.0" layoutY="287.0" />
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets bottom="15.0" top="15.0" />
+   </padding>
+</AnchorPane>

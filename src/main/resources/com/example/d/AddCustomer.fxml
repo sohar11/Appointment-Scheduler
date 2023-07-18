@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.d.AddCustomerController">
+   <children>
+      <VBox layoutX="83.0" layoutY="47.0" prefHeight="200.0" prefWidth="100.0" spacing="13.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Name" />
+            <Label text="Address" />
+            <Label text="Phone Number" />
+            <Label text="Country" />
+            <Label text="State/Province" />
+            <Label text="Postal Code" />
+         </children>
+      </VBox>
+      <Label layoutX="83.0" layoutY="14.0" text="Add Customer">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button layoutX="211.0" layoutY="299.0" mnemonicParsing="false" onAction="#saveAndReturn" text="Save" />
+      <Button layoutX="310.0" layoutY="299.0" mnemonicParsing="false" onAction="#cancelAndReturnToDirectory" text="Cancel" />
+      <VBox layoutX="213.0" layoutY="44.0" prefHeight="200.0" prefWidth="100.0" spacing="5.0">
+         <children>
+            <TextField fx:id="customerIDField" disable="true" editable="false" text="Auto-Generated" />
+            <TextField fx:id="nameField" />
+            <TextField fx:id="addressField" />
+            <TextField fx:id="phoneField" />
+            <ComboBox fx:id="countryBox" onAction="#fillDivisions" prefWidth="150.0" />
+            <ComboBox fx:id="divisionBox" prefWidth="150.0" />
+            <TextField fx:id="postalField" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
